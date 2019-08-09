@@ -10,7 +10,7 @@ node('master')
     }
     stage('error test')
     {    
-        error.....
+    echo 'error............'
      }
 }
     
