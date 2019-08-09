@@ -7,6 +7,10 @@ node('master')
     stage('ContinuousBuild') 
     {
          sh label: '', script: 'mvn package'
-    }    
+    }   
+    stage('Parser test') 
+    {
+        logParser projectRulePath: '/home/ubuntu/parsing_rule.txt', showGraphs: true, useProjectRule: true
+    }
 }
 
