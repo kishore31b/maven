@@ -8,5 +8,10 @@ node('master')
     {
         logParser projectRulePath: '/home/ubuntu/parsing_rule.txt', showGraphs: true, useProjectRule: true
     }
+    stage('error test')
+    {    
+        error.....
+     }
 }
+    
 
