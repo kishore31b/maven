@@ -17,6 +17,16 @@ pipeline
                 sh 'mvn package'
             }
         }
+        stage('ContBuild')
+        {
+            steps
+            {
+                  archiveArtifacts artifacts: '**/*.war', onlyIfSuccessful: true
+            }
+        }
+        
+         
+        
         stage('ContDeployment')
         {
             steps
